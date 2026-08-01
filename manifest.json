@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_icon": "icons/icon48.png"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "commands": {
+      "toggle-ui": {
+         "description": "Toggle FlipHelper UI",
+         "suggested_key": {
+            "default": "Alt+A"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "styles.css" ],
+      "js": [ "content.js" ],
+      "matches": [ "https://bloxflip.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Minimalistic session profit tracker for Bloxflip.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmlde9HyYS/TkjRIQcDepdLkYdzghPqR4ODBZiupg21AKcxLnLbjXra8lF6DUwPkMXSKs4xl80AANoD5W6DPedIC0PR+h94rnHH7yyO2wPcQp7Np9HclnRqGv4gvwHgrcG1I9DSRckU7zG8NIo7G516DHB4d2fn+OjgJAD4639wD0dt70g2VcYoH4kz/of64gjA5u1RGvUqQ6f1Wm7XiufuDBqaAN/VYESS/vIwW2x2BlHzE3kGc+whB+OIv4rjf9ndp0EeUVXj/rQkJmooILF+89x428g3dRrJIdmFrlHckTSQT7Ieo+HgVxD+AS2it2y8WCaesi7oxQT1P4Mq9OQQIDAQAB",
+   "manifest_version": 3,
+   "name": "FlipHelper",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://bloxflip.com/*" ],
+      "resources": [ "fonts/*.woff2", "inject.js", "basic.svg", "chart.svg" ]
+   } ]
+}
