@@ -310,7 +310,7 @@
             const flipcoins = wallet.balances.FLIPCOINS || 0;
             const rocoins = wallet.balances.ROCOINS || wallet.balances.ROBUX || 0;
             const otherBal = wallet.balances.balance || wallet.balance || 0;
-            
+
             const domCurrency = getActiveCurrencyFromDOM();
             if (domCurrency !== null) {
                 const balance = domCurrency === 'FLIPCOINS' ? flipcoins : rocoins;
@@ -328,13 +328,13 @@
                 activeCurrency = domCurrency;
                 return { balance, currency: domCurrency };
             }
-            
+
             if (activeCurrency === 'FLIPCOINS') {
                 return { balance: flipcoins, currency: 'FLIPCOINS' };
             } else if (activeCurrency === 'ROCOINS') {
                 return { balance: rocoins, currency: 'ROCOINS' };
             }
-            
+
             return { balance: rocoins, currency: null };
         }
         if (wallet && typeof wallet.balance === 'number') {
@@ -1404,9 +1404,9 @@
                                 </div>
                             </div>
                             <div id="fh-tab-predictor" class="fh-tab-content" style="display: none;">
-                                <div class="fh-placeholder-title">Predictor</div>
-                                <div class="fh-placeholder-desc">Redirect to Blox-Predictor web application for advanced algorithms.</div>
-                                <button class="fh-btn-primary" id="fh-predictor-redirect-btn">Open Predictor</button>
+                                <div class="fh-placeholder-title">Blox-Predictor</div>
+                                <div class="fh-placeholder-desc">Try out Blox-Predictor for free now!</div>
+                                <button class="fh-btn-primary" id="fh-predictor-redirect-btn">Get Started</button>
                             </div>
                         </div>
                         <div class="fh-tab-bar">
@@ -1540,7 +1540,7 @@
         const redirectBtn = document.getElementById('fh-predictor-redirect-btn');
         if (redirectBtn) {
             redirectBtn.onclick = () => {
-                window.open('https://bloxpredictor.com', '_blank');
+                window.open('https://predictor.best', '_blank');
             };
         }
 
